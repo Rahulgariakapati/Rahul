@@ -108,6 +108,20 @@
     </div>
 
     <script>
+       function validateForm() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const legalResidence = document.getElementById('legalResidence').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zip = document.getElementById('zip').value;
+
+            if (!firstName || !lastName || !legalResidence || !city || !state || !zip) {
+                alert("Please fill out all required fields");
+                return false;
+            }
+                return true;
+        }
         function createRecord() {
             const firstName = document.getElementById('firstName').value;
             const middleName = document.getElementById('middleName').value;
